@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <title>Jeu de similitude</title>
+
+    <!--Pour l'ajustement sur les périphériques mobiles-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="medias/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="medias/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="medias/favicon/favicon-16x16.png">
+    <link rel="manifest" href="medias/favicon/site.webmanifest">
+    <link rel="mask-icon" href="medias/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    	<!--Pour l'enregistrement de la page Web comme une application d'écran d'accueil sur appareil iOS-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+    
+    <!--Style pour le body-->
+    <style type="text/css">
+    	* {
+			padding: 0px;
+			margin: 0px;
+		}
+        body {
+            background-image: url("medias/sprites/arrierePlan.png");
+            background-repeat:no-repeat;
+            background-size:cover;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #orientation {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #81BBDD;
+			background-image: url(medias/sprites/mettrePortrait.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			z-index: 1000;
+			display: none;
+		}
+    </style>
+
+    <!--Intégration des scripts-->
+
+    
+	<!--IMPORTANT!!! Intégration du script développé conjointement par Google et Adobe 
+	    permettant de charger des polices de caractères Google ou TypeKit-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    
+    <!--Librairie Phaser non minifié à partir d'un serveur CDN-->
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.js"></script>
+    <script src="js/jeu.js" type="module"></script>
+</head>
+
+<body>
+    <!-- Ajout d'une balise pour indiquer au joueur avec une image de changer d'orientation ou non -->
+	<div id="orientation"></div>
+</body>
+
+</html>
